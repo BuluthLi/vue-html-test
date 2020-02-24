@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" @click="onAlert">
+        <div :class="flag==1?'active':''">
+            {{message}}
+        </div>
+        <Child :ceshi="props" v-on:color="onChangeColor"></Child>
+
+    </div>
+
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script type="text/javascript" src="myVue.js"></script>
+</body>
+
+</html>
